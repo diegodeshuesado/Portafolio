@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/obra/collage/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/collage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/collage/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/work/collage/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/collage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/collage/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/obra/ceramica/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/ceramica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/ceramics/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/work/ceramics/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/ceramica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/ceramics/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/obra/digital/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/digital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/digital/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/work/digital/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/obra/digital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/work/digital/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/about/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/about/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/cv/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/cv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/cv/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/cv/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/cv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/cv/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/contacto/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.github.io/portafolio/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.github.io/portafolio/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.github.io/portafolio/en/contact/"/>
+  </url>
+</urlset>
