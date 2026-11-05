@@ -7,7 +7,7 @@
 export const site = {
   name: 'Diego Deshuesado',
   // URL pública del sitio (GitHub Pages). Cámbiala si usas otro dominio.
-  url: 'https://diegodeshuesado.github.io/portafolio',
+  url: 'https://diegodeshuesado.github.io/Portafolio',
   // Correo público. Déjalo vacío ('') para no mostrarlo.
   email: '',
   social: [

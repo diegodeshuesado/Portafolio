@@ -1,7 +1,7 @@
 # Diego Deshuesado — portafolio
 
 Sitio de artista bilingüe (español / inglés), estático y sin dependencias.
-Publicado con GitHub Pages en **https://diegodeshuesado.github.io/portafolio/**
+Publicado con GitHub Pages en **https://diegodeshuesado.github.io/Portafolio/**
 
 ## Estructura
 
@@ -52,7 +52,7 @@ Luego abre http://localhost:8000
 1. En GitHub, abre el repo → **Settings → Pages**.
 2. En *Build and deployment*, *Source*: **Deploy from a branch**.
 3. *Branch*: **main**, carpeta **/ (root)** → **Save**.
-4. En uno o dos minutos el sitio queda en https://diegodeshuesado.github.io/portafolio/
+4. En uno o dos minutos el sitio queda en https://diegodeshuesado.github.io/Portafolio/
 
 Cada vez que subas cambios a `main`, el sitio se actualiza solo.
 
