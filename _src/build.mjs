@@ -325,7 +325,6 @@ function contact(lang) {
   <dl class="contact__list">
     ${site.email ? `<div><dt class="label">${t.emailLabel}</dt><dd><a class="contact__big" href="mailto:${site.email}">${site.email}</a></dd></div>` : ''}
     <div><dt class="label">${t.socialLabel}</dt><dd>${site.social.map((s) => `<a class="contact__big" href="${s.url}" rel="noopener me" target="_blank">${esc(s.handle)} <small>${esc(s.label)} ↗</small></a>`).join('<br>')}</dd></div>
-    <div><dt class="label">${t.basedIn}</dt><dd>${t.location}</dd></div>
   </dl>
 </article>`,
   });
