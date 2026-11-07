@@ -15,7 +15,7 @@ export const site = {
   // URL pública del sitio (GitHub Pages). Cámbiala si usas otro dominio.
   url: 'https://diegodeshuesado.com',
   // Correo público. Déjalo vacío ('') para no mostrarlo.
-  email: 'diegogut93@gmail.com',
+  email: 'hello@diegodeshuesado.com',
   social: [
     { label: 'Twitter / X', handle: '@DiegoDeshuesado', url: 'https://twitter.com/DiegoDeshuesado' },
     { label: 'Instagram', handle: '@diegodeshuesado', url: 'https://www.instagram.com/diegodeshuesado/' },
