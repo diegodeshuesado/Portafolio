@@ -1,7 +1,7 @@
 # Diego Deshuesado — portafolio
 
 Sitio de artista bilingüe (español / inglés), estático y sin dependencias.
-Publicado con GitHub Pages en **https://diegodeshuesado.github.io/Portafolio/**
+Publicado en **https://diegodeshuesado.com** (hosting Hostinger, despliegue automático desde la rama `main` vía Git de hPanel).
 
 ## Estructura
 
@@ -47,16 +47,13 @@ python3 -m http.server 8000
 
 Luego abre http://localhost:8000
 
-## Publicar en GitHub Pages (una sola vez)
+## Publicación
 
-1. En GitHub, abre el repo → **Settings → Pages**.
-2. En *Build and deployment*, *Source*: **Deploy from a branch**.
-3. *Branch*: **main**, carpeta **/ (root)** → **Save**.
-4. En uno o dos minutos el sitio queda en https://diegodeshuesado.github.io/Portafolio/
+El sitio vive en Hostinger. hPanel → Sitios web → diegodeshuesado.com → Avanzado → Git
+está conectado a este repo (rama `main`, carpeta `public_html`) con auto-deploy: cada push a
+`main` se publica solo. `.htaccess` fuerza HTTPS, quita el `www` y usa `404.html`.
 
-Cada vez que subas cambios a `main`, el sitio se actualiza solo.
-
-Si algún día usas un dominio propio, cambia `site.url` en `_src/content.mjs` y vuelve a generar.
+Si cambias de dominio, cambia `site.url` en `_src/content.mjs` y vuelve a generar.
 
 ## Pendientes de contenido
 

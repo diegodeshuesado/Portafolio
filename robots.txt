@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://diegodeshuesado.github.io/Portafolio/sitemap.xml
+Sitemap: https://diegodeshuesado.com/sitemap.xml

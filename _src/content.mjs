@@ -13,7 +13,7 @@ export const site = {
   knowsAbout: ['Collage', 'Cerámica', 'Grabado', 'Arte digital', 'Escritura asémica', 'Performance', 'Arte contemporáneo'],
   name: 'Diego Deshuesado',
   // URL pública del sitio (GitHub Pages). Cámbiala si usas otro dominio.
-  url: 'https://diegodeshuesado.github.io/Portafolio',
+  url: 'https://diegodeshuesado.com',
   // Correo público. Déjalo vacío ('') para no mostrarlo.
   email: 'diegogut93@gmail.com',
   social: [
