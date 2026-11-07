@@ -201,7 +201,7 @@ function home(lang) {
     </div>
     <div class="hero__text">
       <h1 class="hero__name">Diego<br>Deshuesado</h1>
-      <p class="hero__role">${t.role}<br>${t.location}</p>
+      <p class="hero__role">${t.role}</p>
     </div>
   </div>
 </section>
