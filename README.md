@@ -63,9 +63,9 @@ Si algún día usas un dominio propio, cambia `site.url` en `_src/content.mjs` y
 - [x] Imágenes de obra (exportadas desde los originales, 2000 px).
 - [ ] Revisar el **statement** (es un borrador escrito a partir de los textos del Wix).
 - [ ] Revisar las traducciones al inglés.
-- [ ] Actualizar semblanza y CV (la bio dice “concluyendo la licenciatura”).
-- [ ] Galería Oscar Odín: la semblanza dice 2018–2019 y el CV 2017–2018; elegir una.
+- [x] Semblanza y CV actualizados (incluye Banff 2020).
+- [x] Galería Oscar Odín: 2017–2019.
 - [ ] Medidas de las obras y fechas de las piezas digitales sin año.
-- [ ] Correo de contacto (y otras redes, si aplica).
+- [x] Correo de contacto (cambiar al comprar dominio).
 - [x] `images/og-image.jpg`.
-- [ ] `files/cv-diego-deshuesado.pdf` (opcional).
+- [x] `files/cv-diego-deshuesado.pdf` (regenerarlo si cambia el CV).

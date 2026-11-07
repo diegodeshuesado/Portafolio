@@ -9,7 +9,7 @@ export const site = {
   // URL pública del sitio (GitHub Pages). Cámbiala si usas otro dominio.
   url: 'https://diegodeshuesado.github.io/Portafolio',
   // Correo público. Déjalo vacío ('') para no mostrarlo.
-  email: '',
+  email: 'diegogut93@gmail.com',
   social: [
     { label: 'Twitter / X', handle: '@DiegoDeshuesado', url: 'https://twitter.com/DiegoDeshuesado' },
     // { label: 'Instagram', handle: '@usuario', url: 'https://instagram.com/usuario' },
@@ -106,12 +106,12 @@ export const statement = {
 // ── SEMBLANZA (texto del Wix) ──────────────────────────────────
 export const bio = {
   es: [
-    'Diego Deshuesado nació en Nezahualcóyotl, Estado de México, México, en 1993. Es un artista que vive alternamente en Querétaro y Apaseo el Alto, Guanajuato. Actualmente está concluyendo la Licenciatura en Artes Plásticas con línea terminal en Artes Plásticas en la Universidad Autónoma de Querétaro. Estuvo un año estudiando en la Escuela Activa de Fotografía Querétaro. En el 2014 comenzó a trabajar con el escultor David Manzanares.',
-    'Deshuesado ha expuesto en distintas galerías y museos de los estados de Querétaro y Guanajuato, entre ellos el Museo de la Ciudad, la Galería Libertad, el Centro de Arte Universitario y el Centro de Cultura de Apaseo el Alto. Durante 2018 y 2019 estuvo a cargo de la Galería Fundación Oscar Odín. En 2021 comenzó la Ingeniería en Tecnologías de la Información y Comunicación.',
+    'Diego Deshuesado (Nezahualcóyotl, Estado de México, 1993) es un artista que vive entre Querétaro y Apaseo el Alto, Guanajuato. Egresó de la Licenciatura en Artes Visuales con línea terminal en Artes Plásticas de la Universidad Autónoma de Querétaro y estudió un año en la Escuela Activa de Fotografía Querétaro. En 2014 comenzó a trabajar con el escultor David Manzanares.',
+    'Ha expuesto en galerías y museos de Querétaro y Guanajuato, entre ellos el Museo de la Ciudad, la Galería Libertad, el Centro de Arte Universitario y el Centro de Cultura de Apaseo el Alto. De 2017 a 2019 estuvo a cargo de la Galería Fundación Oscar Odín. En 2020 fue seleccionado, con beca, para el programa Poetry, Politics and Embodiment del Banff Centre for Arts and Creativity (Alberta, Canadá), donde desarrollaría su pieza _máquinas; la residencia no pudo realizarse por la pandemia. Después estudió Ingeniería en Tecnologías de la Información y Comunicación.',
   ],
   en: [
-    'Diego Deshuesado was born in Nezahualcóyotl, State of Mexico, Mexico, in 1993. He is an artist who lives between Querétaro and Apaseo el Alto, Guanajuato. He is currently completing a BA in Visual Arts at the Universidad Autónoma de Querétaro, and spent a year studying at the Escuela Activa de Fotografía Querétaro. In 2014 he began working with the sculptor David Manzanares.',
-    'Deshuesado has exhibited in galleries and museums in the states of Querétaro and Guanajuato, including the Museo de la Ciudad, Galería Libertad, Centro de Arte Universitario and Centro de Cultura de Apaseo el Alto. From 2018 to 2019 he ran the Galería Fundación Oscar Odín. In 2021 he began a degree in Information and Communication Technologies Engineering.',
+    'Diego Deshuesado (Nezahualcóyotl, State of Mexico, 1993) is an artist who lives between Querétaro and Apaseo el Alto, Guanajuato. He holds a BA in Visual Arts, with a specialisation in Fine Arts, from the Universidad Autónoma de Querétaro, and spent a year at the Escuela Activa de Fotografía Querétaro. In 2014 he began working with the sculptor David Manzanares.',
+    'He has exhibited in galleries and museums in Querétaro and Guanajuato, including the Museo de la Ciudad, Galería Libertad, Centro de Arte Universitario and Centro de Cultura de Apaseo el Alto. From 2017 to 2019 he ran the Galería Fundación Oscar Odín. In 2020 he was selected, with a scholarship, for the Poetry, Politics and Embodiment programme at the Banff Centre for Arts and Creativity (Alberta, Canada), where he was to develop his piece _máquinas; the residency could not take place due to the pandemic. He later studied Engineering in Information and Communication Technologies.',
   ],
 };
 
@@ -122,18 +122,38 @@ export const cv = [
     title: { es: 'Formación', en: 'Education' },
     items: [
       { year: '2021–', es: 'Ingeniería en Tecnologías de la Información y Comunicación.', en: 'Engineering in Information and Communication Technologies.' },
-      { year: 'En curso', yearEn: 'Ongoing', es: 'Licenciatura en Artes Plásticas, Universidad Autónoma de Querétaro.', en: 'BA in Visual Arts, Universidad Autónoma de Querétaro.' },
+      { year: '2013–2020', es: 'Licenciatura en Artes Visuales con línea terminal en Artes Plásticas, Universidad Autónoma de Querétaro.', en: 'BA in Visual Arts, specialisation in Fine Arts, Universidad Autónoma de Querétaro.' },
       { year: '2018–2019', es: 'Diplomado en línea «ABC para la creación de proyectos culturales».', en: 'Online diploma “ABC for Creating Cultural Projects”.' },
-      { year: '2014–2015', es: 'Escuela Activa de Fotografía Querétaro.', en: 'Escuela Activa de Fotografía Querétaro (photography school).' },
+      { year: '2014–2015', es: 'Curso técnico en fotografía, Escuela Activa de Fotografía Querétaro.', en: 'Technical course in photography, Escuela Activa de Fotografía Querétaro.' },
       { year: '2012–2013', es: 'Diplomado de Arte Digital, AddDigital, Querétaro.', en: 'Diploma in Digital Art, AddDigital, Querétaro.' },
+    ],
+  },
+  {
+    title: { es: 'Proyectos especiales', en: 'Special projects' },
+    items: [
+      { year: '2020', es: 'Seleccionado, con beca, para el programa «Poetry, Politics and Embodiment», Banff Centre for Arts and Creativity. Banff, Alberta, Canadá. (No realizado por la pandemia de COVID-19.)', en: 'Selected, with a scholarship, for the “Poetry, Politics and Embodiment” programme, Banff Centre for Arts and Creativity. Banff, Alberta, Canada. (Did not take place due to the COVID-19 pandemic.)' },
+    ],
+  },
+  {
+    title: { es: 'Cursos y seminarios', en: 'Courses and seminars' },
+    items: [
+      { year: '2019', es: 'Laboratorio de Arte y Tecnología 2.0, Galería Libertad. Querétaro, México.', en: 'Art and Technology Laboratory 2.0, Galería Libertad. Querétaro, Mexico.' },
+      { year: '2019', es: 'Festival de la Joven Dramaturgia, taller «Diseño de máquinas para viajar en el tiempo», impartido por Aristeo de la Mora. Querétaro, México.', en: 'Festival de la Joven Dramaturgia, workshop “Designing Machines for Time Travel”, led by Aristeo de la Mora. Querétaro, Mexico.' },
     ],
   },
   {
     title: { es: 'Experiencia', en: 'Experience' },
     items: [
-      { year: '2017–2018', es: 'A cargo de la Galería Oscar Odín, Querétaro.', en: 'Director, Galería Oscar Odín, Querétaro.' },
+      { year: '2017–2019', es: 'A cargo de la Galería Fundación Oscar Odín, Querétaro.', en: 'Director, Galería Fundación Oscar Odín, Querétaro.' },
       { year: '2014–2016', es: 'Asistente del escultor David Manzanares.', en: 'Assistant to the sculptor David Manzanares.' },
       { year: '2013–2014', es: 'Becario en «Gestión Cultural y Formación de Grupos», UAQ.', en: 'Fellow, “Cultural Management and Group Formation”, UAQ.' },
+    ],
+  },
+  {
+    title: { es: 'Docencia', en: 'Teaching' },
+    items: [
+      { year: '2020–2023', es: 'Taller «Aprende a dibujar para la creatividad», encuentro cultural Somos UAQ, Universidad Autónoma de Querétaro.', en: 'Workshop “Learn to Draw for Creativity”, Somos UAQ cultural meeting, Universidad Autónoma de Querétaro.' },
+      { year: '2020', es: 'Taller «Introducción a la pintura», Gestión Cultural y Creación de Grupos, UAQ.', en: 'Workshop “Introduction to Painting”, Cultural Management and Group Creation, UAQ.' },
     ],
   },
   {
