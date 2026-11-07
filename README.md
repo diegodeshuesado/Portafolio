@@ -60,11 +60,12 @@ Si algún día usas un dominio propio, cambia `site.url` en `_src/content.mjs` y
 
 ## Pendientes de contenido
 
-- [ ] Imágenes de obra (ver `images/LEEME.md`).
+- [x] Imágenes de obra (exportadas desde los originales, 2000 px).
 - [ ] Revisar el **statement** (es un borrador escrito a partir de los textos del Wix).
 - [ ] Revisar las traducciones al inglés.
 - [ ] Actualizar semblanza y CV (la bio dice “concluyendo la licenciatura”).
 - [ ] Galería Oscar Odín: la semblanza dice 2018–2019 y el CV 2017–2018; elegir una.
 - [ ] Medidas de las obras y fechas de las piezas digitales sin año.
 - [ ] Correo de contacto (y otras redes, si aplica).
-- [ ] `images/og-image.jpg` y `files/cv-diego-deshuesado.pdf` (opcionales).
+- [x] `images/og-image.jpg`.
+- [ ] `files/cv-diego-deshuesado.pdf` (opcional).

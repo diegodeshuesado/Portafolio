@@ -18,7 +18,7 @@ export const site = {
   cvPdf: 'files/cv-diego-deshuesado.pdf',
   // Imagen para compartir en redes (1200 × 630 px).
   ogImage: 'images/og-image.jpg',
-  portrait: { file: 'retrato/autorretrato-collage.jpg', ratio: '3/4' },
+  portrait: { file: 'retrato/autorretrato-collage.jpg', ratio: '1480/2048' },
 };
 
 // Rutas de cada página por idioma (la URL final termina en "/").
@@ -169,10 +169,11 @@ export const series = [
       es: ['Papel, tijeras, recortes de periódico, pegamento y plumones fueron el medio utilizado para dialogar en torno a un contexto de violencia, de inseguridad y de aquellas cosas que rodean a una ciudad en transición. Se hace uso del collage para recortar y pegar, marcar y borrar, y crear una imagen del entorno; en este caso, Apaseo el Alto.'],
       en: ['Paper, scissors, newspaper clippings, glue and markers were the means used to engage with a context of violence and insecurity, and with the things that surround a city in transition. Collage is used to cut and paste, mark and erase, and build an image of the surroundings; in this case, Apaseo el Alto.'],
     },
-    works: [1, 2, 3, 4, 5, 6, 7].map((n) => ({
-      file: `collage/collage-0${n}.jpg`,
-      ratio: '1/1',
-      title: { es: `Collage No. ${n}`, en: `Collage No. ${n}` },
+    // Proporción real de cada foto (ancho/alto)
+    works: ['1689/2458', '2880/4104', '2641/3785', '2664/3960', '2739/3938', '1870/2662', '2712/3904'].map((ratio, i) => ({
+      file: `collage/collage-0${i + 1}.jpg`,
+      ratio,
+      title: { es: `Collage No. ${i + 1}`, en: `Collage No. ${i + 1}` },
       year: '2019',
       medium: { es: 'Collage de impresiones con tinta china sobre papel', en: 'Collage of India ink prints on paper' },
       size: '',
@@ -218,13 +219,13 @@ export const series = [
       en: ['Digital images, animation and digitised analogue work (metal engraving and photogram) produced between 2019 and 2021 and released as NFTs (crypto art).'],
     },
     works: [
-      { file: 'digital/digital-01-sin-titulo.jpg', ratio: '2/1', title: { es: 'Sin título', en: 'Untitled' }, year: '', medium: { es: 'Obra análoga digitalizada', en: 'Digitised analogue work' }, size: '' },
-      { file: 'digital/digital-02-sin-titulo.jpg', ratio: '168/246', title: { es: 'Sin título', en: 'Untitled' }, year: '', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
-      { file: 'digital/digital-03-sin-titulo.jpg', ratio: '680/433', title: { es: 'Sin título', en: 'Untitled' }, year: '', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
-      { file: 'digital/digital-04-diaspora.gif', ratio: '3/2', title: { es: 'Diáspora', en: 'Diáspora' }, year: '', medium: { es: 'Fotogramas, GIF animado', en: 'Photograms, animated GIF' }, size: '' },
-      { file: 'digital/digital-05-anthrobscen.jpg', ratio: '161/222', title: { es: 'Anthrobscen', en: 'Anthrobscen' }, year: '2019', medium: { es: 'Grabado en metal, digitalizado', en: 'Metal engraving, digitised' }, size: '' },
-      { file: 'digital/digital-06-b.jpg', ratio: '499/350', title: { es: 'B)', en: 'B)' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
-      { file: 'digital/digital-07-a.jpg', ratio: '680/480', title: { es: 'a', en: 'a' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
+      { file: 'digital/digital-01-sin-titulo.jpg', ratio: '1699/852', title: { es: 'fuck control', en: 'fuck control' }, year: '2020', medium: { es: 'Obra análoga digitalizada', en: 'Digitised analogue work' }, size: '' },
+      { file: 'digital/digital-02-sin-titulo.jpg', ratio: '3957/5787', title: { es: 'formtrans', en: 'formtrans' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
+      { file: 'digital/digital-03-sin-titulo.jpg', ratio: '3706/2360', title: { es: 'alienation', en: 'alienation' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
+      { file: 'digital/digital-04-diaspora.gif', ratio: '525/350', title: { es: 'Diáspora', en: 'Diáspora' }, year: '', medium: { es: 'Fotogramas, GIF animado', en: 'Photograms, animated GIF' }, size: '' },
+      { file: 'digital/digital-05-anthrobscen.jpg', ratio: '1696/2333', title: { es: 'Anthrobscen', en: 'Anthrobscen' }, year: '2019', medium: { es: 'Grabado en metal, digitalizado', en: 'Metal engraving, digitised' }, size: '' },
+      { file: 'digital/digital-06-b.jpg', ratio: '3507/2480', title: { es: 'B)', en: 'B)' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
+      { file: 'digital/digital-07-a.jpg', ratio: '1121/795', title: { es: 'a', en: 'a' }, year: '2021', medium: { es: 'Arte digital', en: 'Digital art' }, size: '' },
     ],
   },
 ];
