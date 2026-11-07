@@ -5,6 +5,12 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
+  // Descripción para buscadores (portada), por idioma.
+  seo: {
+    es: 'Diego Deshuesado (1993), artista visual contemporáneo de Querétaro y Apaseo el Alto, Guanajuato. Collage, cerámica, grabado, imagen digital, escritura asémica y _máquinas.',
+    en: 'Diego Deshuesado (b. 1993), contemporary visual artist from Querétaro and Apaseo el Alto, Guanajuato, Mexico. Collage, ceramics, printmaking, digital image, asemic writing and _máquinas.',
+  },
+  knowsAbout: ['Collage', 'Cerámica', 'Grabado', 'Arte digital', 'Escritura asémica', 'Performance', 'Arte contemporáneo'],
   name: 'Diego Deshuesado',
   // URL pública del sitio (GitHub Pages). Cámbiala si usas otro dominio.
   url: 'https://diegodeshuesado.github.io/Portafolio',
@@ -12,7 +18,7 @@ export const site = {
   email: 'diegogut93@gmail.com',
   social: [
     { label: 'Twitter / X', handle: '@DiegoDeshuesado', url: 'https://twitter.com/DiegoDeshuesado' },
-    // { label: 'Instagram', handle: '@usuario', url: 'https://instagram.com/usuario' },
+    { label: 'Instagram', handle: '@diegodeshuesado', url: 'https://www.instagram.com/diegodeshuesado/' },
   ],
   // CV en PDF: si existe este archivo, aparece el botón de descarga.
   cvPdf: 'files/cv-diego-deshuesado.pdf',

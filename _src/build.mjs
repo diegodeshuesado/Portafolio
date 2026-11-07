@@ -142,7 +142,36 @@ const personLd = (lang) => ({
   birthPlace: 'Nezahualcóyotl, Estado de México, México',
   homeLocation: ui[lang].location,
   sameAs: site.social.map((s) => s.url),
+  description: site.seo[lang],
+  knowsAbout: site.knowsAbout,
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidad Autónoma de Querétaro' },
+  ...(has(`images/${site.portrait.file}`) ? { image: `${site.url}/images/${site.portrait.file}` } : {}),
   ...(site.email ? { email: `mailto:${site.email}` } : {}),
+});
+
+// Datos estructurados de una serie: lista de obras (VisualArtwork).
+const seriesLd = (s, lang) => ({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${s.title[lang]} — ${site.name}`,
+  url: abs(routes[s.id][lang]),
+  inLanguage: lang,
+  author: { '@type': 'Person', name: site.name, url: abs(routes.home[lang]) },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: s.works.filter((w) => has(`images/${w.file}`)).map((w, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'VisualArtwork',
+        name: w.title[lang],
+        ...(w.year ? { dateCreated: w.year } : {}),
+        ...(w.medium?.[lang] ? { artMedium: w.medium[lang] } : {}),
+        image: `${site.url}/images/${w.file}`,
+        creator: { '@type': 'Person', name: site.name },
+      },
+    })),
+  },
 });
 
 // ── páginas ───────────────────────────────────────────────────
@@ -152,7 +181,7 @@ function home(lang) {
   return page({
     lang, key: 'home', bodyClass: 'is-home',
     title: `${site.name} — ${t.role}`,
-    description: `${site.name} (1993), ${t.role.toLowerCase()}. ${t.tagline} ${t.location}.`,
+    description: site.seo[lang],
     jsonld: personLd(lang),
     body: (prefix) => `
 <section class="hero" aria-label="${esc(site.name)}">
@@ -202,6 +231,7 @@ function seriesPage(s, lang) {
     lang, key: s.id,
     title: `${s.title[lang]} (${s.years}) — ${site.name}`,
     description: `${s.title[lang]}, ${s.years}. ${s.text[lang][0]}`.slice(0, 158),
+    jsonld: seriesLd(s, lang),
     body: (prefix) => `
 <article class="series">
   <header class="series__head">
