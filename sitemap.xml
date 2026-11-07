@@ -41,6 +41,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/digital/"/>
   </url>
   <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/"/>
+  </url>
+  <url>
     <loc>https://diegodeshuesado.com/sobre/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/sobre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/about/"/>
@@ -69,5 +79,55 @@
     <loc>https://diegodeshuesado.com/en/contact/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/contacto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/constelaciones_urbanas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/constelaciones_urbanas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/constelaciones_urbanas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/constelaciones_urbanas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/constelaciones_urbanas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/constelaciones_urbanas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/poe_arqui_lecturas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/poe_arqui_lecturas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/poe_arqui_lecturas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/poe_arqui_lecturas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/poe_arqui_lecturas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/poe_arqui_lecturas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/anar_quitecturas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/anar_quitecturas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/anar_quitecturas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/anar_quitecturas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/anar_quitecturas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/anar_quitecturas/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/no_poesia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/no_poesia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/no_poesia/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/no_poesia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/no_poesia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/no_poesia/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/ficciones_de_mi_barrio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/ficciones_de_mi_barrio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/ficciones_de_mi_barrio/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/ficciones_de_mi_barrio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/ficciones_de_mi_barrio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/ficciones_de_mi_barrio/"/>
   </url>
 </urlset>

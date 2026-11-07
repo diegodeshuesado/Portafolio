@@ -33,6 +33,7 @@ export const routes = {
   collage:  { es: 'obra/collage/',  en: 'en/work/collage/' },
   ceramica: { es: 'obra/ceramica/', en: 'en/work/ceramics/' },
   digital:  { es: 'obra/digital/',  en: 'en/work/digital/' },
+  maquinas: { es: 'obra/maquinas/', en: 'en/work/maquinas/' },
   about:    { es: 'sobre/',         en: 'en/about/' },
   cv:       { es: 'cv/',            en: 'en/cv/' },
   contact:  { es: 'contacto/',      en: 'en/contact/' },
@@ -44,7 +45,8 @@ export const ui = {
     role: 'Artista visual',
     location: 'Querétaro y Apaseo el Alto, México',
     tagline: 'Collage, cerámica, grabado e imagen digital.',
-    nav: { work: 'Obra', about: 'Statement / Bio', cv: 'CV', contact: 'Contacto' },
+    maq: { machines: (n) => `${n} máquinas`, operation: 'Operación', materials: 'Materiales', authors: 'Autoría', participate: 'Participar', make: 'Hacer esta máquina', open: 'abrir galería_ →', soon: 'próximamente_', gallery: 'Piezas enviadas', loading: 'Cargando piezas…', empty: 'Aún no hay piezas aprobadas de esta máquina. Puedes hacer la primera.', error: 'No se pudo cargar la galería en este momento.', siteGallery: 'Ver la galería completa', nextMachine: 'Siguiente máquina', back: 'Todas las máquinas', ficha: 'Ficha' },
+    nav: { work: 'Obra', maquinas: '_máquinas', about: 'Statement / Bio', cv: 'CV', contact: 'Contacto' },
     skip: 'Saltar al contenido',
     index: 'Índice de obra',
     works: (n) => `${n} ${n === 1 ? 'obra' : 'obras'}`,
@@ -72,7 +74,8 @@ export const ui = {
     role: 'Visual artist',
     location: 'Querétaro and Apaseo el Alto, Mexico',
     tagline: 'Collage, ceramics, printmaking and digital image.',
-    nav: { work: 'Work', about: 'Statement / Bio', cv: 'CV', contact: 'Contact' },
+    maq: { machines: (n) => `${n} machines`, operation: 'Operation', materials: 'Materials', authors: 'Authors', participate: 'Take part', make: 'Make this machine', open: 'open gallery_ →', soon: 'coming soon_', gallery: 'Submitted pieces', loading: 'Loading pieces…', empty: 'There are no approved pieces for this machine yet. You can make the first one.', error: 'The gallery could not be loaded right now.', siteGallery: 'See the full gallery', nextMachine: 'Next machine', back: 'All machines', ficha: 'Details' },
+    nav: { work: 'Work', maquinas: '_máquinas', about: 'Statement / Bio', cv: 'CV', contact: 'Contact' },
     skip: 'Skip to content',
     index: 'Index of work',
     works: (n) => `${n} ${n === 1 ? 'work' : 'works'}`,
@@ -196,7 +199,7 @@ export const cv = [
 export const series = [
   {
     id: 'collage',
-    num: '01',
+    num: '02',
     title: { es: 'Collage', en: 'Collage' },
     subtitle: { es: 'Apaseo el Alto', en: 'Apaseo el Alto' },
     years: '2019',
@@ -216,7 +219,7 @@ export const series = [
   },
   {
     id: 'ceramica',
-    num: '02',
+    num: '03',
     title: { es: 'Cerámica', en: 'Ceramics' },
     subtitle: { es: 'Rasgos', en: 'Features' },
     years: '2019',
@@ -245,7 +248,7 @@ export const series = [
   },
   {
     id: 'digital',
-    num: '03',
+    num: '04',
     title: { es: 'Digital', en: 'Digital' },
     subtitle: { es: 'Imagen, animación y obra digitalizada', en: 'Image, animation and digitised work' },
     years: '2019–2021',
@@ -264,3 +267,83 @@ export const series = [
     ],
   },
 ];
+
+// ── _MÁQUINAS ──────────────────────────────────────────────────
+// Proyecto participativo. La app vive en `url` (repo diegodeshuesado/maquinas);
+// aquí se presenta como obra y cada máquina muestra en vivo las piezas aprobadas.
+export const maquinas = {
+  id: 'maquinas',
+  num: '01',
+  url: 'https://maquinas.diegodeshuesado.com',
+  title: { es: '_máquinas', en: '_máquinas' },
+  subtitle: { es: 'Instructivos participativos', en: 'Participatory instruction manuals' },
+  years: '2019–2026',
+  ficha: {
+    es: ['Instructivos participativos; resultados fotográficos, textuales y narrativos.', 'Montaje en muro con carpetas e instructivos impresos, Galería Libertad (LaTA 2.0), Querétaro, 2019.', 'Versión en línea, 2026.'],
+    en: ['Participatory instruction manuals; photographic, textual and narrative results.', 'Wall installation with folders and printed manuals, Galería Libertad (LaTA 2.0), Querétaro, 2019.', 'Online version, 2026.'],
+  },
+  text: {
+    es: [
+      '_máquinas son instructivos que reinterpretan las relaciones entre personas en los espacios. Cada máquina propone una operación —renombrar un lugar con poesía, trazar constelaciones con las luces de la ciudad, intervenir un monumento— y quien la opera produce resultados visuales, textuales y narrativos.',
+      'La pieza cuestiona la respuesta del tejido social a reglas preestablecidas y piensa el lenguaje como código, algoritmo o programa: si nuestras conductas siguen instrucciones, otras instrucciones pueden producir otras formas de habitar.',
+      'Se presentó en 2019 en la Galería Libertad, dentro de LaTA 2.0, como un montaje de carpetas en muro, cada una con su operación e instructivo impreso. En 2026 las máquinas se reactivaron en línea: cualquier persona puede operarlas desde su celular y enviar su pieza, que se publica en la galería bajo licencia CC BY-NC-SA 4.0.',
+    ],
+    en: [
+      '_máquinas are instruction manuals that reinterpret the relationships between people in spaces. Each machine proposes an operation —renaming a place with poetry, tracing constellations with the city lights, intervening a monument— and whoever operates it produces visual, textual and narrative results.',
+      'The piece questions how the social fabric responds to pre-established rules and thinks of language as code, algorithm or program: if our behaviour follows instructions, other instructions can produce other ways of inhabiting.',
+      'It was first shown in 2019 at Galería Libertad, within LaTA 2.0, as a wall installation of folders, each holding its operation and a printed manual. In 2026 the machines were reactivated online: anyone can operate them from their phone and submit their piece, which is published in the gallery under a CC BY-NC-SA 4.0 licence.',
+    ],
+  },
+  items: [
+    {
+      id: 'constelaciones_urbanas', nombre: 'constelacio-<br>nes_urbanas', activa: true,
+      credito: { es: 'Diego Deshuesado y Daniel Vázquez', en: 'Diego Deshuesado and Daniel Vázquez' },
+      op: { es: 'Crear un compendio mitológico de constelaciones ficticias trazadas con las luces de la ciudad.', en: 'Create a mythological compendium of fictional constellations traced with the city lights.' },
+      desc: {
+        es: 'El propósito es reimaginar el cielo nocturno en los espacios públicos. Se delimita una zona en el mapa, se fotografían tres o más objetos que emitan luz —en la calle o dentro de casa— y se unen con líneas para dibujar la constelación. Al final se escribe su origen como un mito o una invención, y la pieza se suma al mapa de constelaciones del área.',
+        en: 'The aim is to reimagine the night sky in public spaces. You mark an area on the map, photograph three or more light-emitting objects —on the street or at home— and join them with lines to draw the constellation. Finally you write its origin as a myth or an invention, and the piece joins the map of constellations of the area.',
+      },
+      materiales: { es: 'Celular con cámara.', en: 'A phone with a camera.' },
+    },
+    {
+      id: 'un_pueblo_feliz', nombre: 'un_pue-<br>blo_feliz', activa: false,
+      op: { es: 'Contrarrestar el discurso de estabilidad social mediante la publicación de selfies con datos de violencia reales.', en: 'Counter the discourse of social stability by publishing selfies with real data on violence.' },
+    },
+    {
+      id: 'poe_arqui_lecturas', nombre: 'poe_arqui_<br>lecturas', activa: true,
+      op: { es: 'Renombrar espacios de un entorno mediante poesía.', en: 'Rename the spaces of an environment through poetry.' },
+      desc: {
+        es: 'Se delimita una zona y se consigue poesía, al gusto o al azar: en el buscador de la máquina, en libros a la mano o en la biblioteca más cercana. Al caminar se fotografían fachadas, pasillos, escaleras y calles, y se marca en el mapa dónde se tomó cada foto. A cada imagen se le pone al pie un fragmento de poema, y el conjunto se ordena como una narración foto-poética.',
+        en: 'You mark an area and find some poetry, by choice or by chance: in the machine’s search engine, in books at hand or at the nearest library. While walking you photograph façades, corridors, stairs and streets, and mark on the map where each photo was taken. Each image gets a fragment of a poem as its caption, and the whole is arranged as a photo-poetic narrative.',
+      },
+      materiales: { es: 'Celular con cámara y poesía a la mano.', en: 'A phone with a camera and poetry at hand.' },
+    },
+    {
+      id: 'anar_quitecturas', nombre: 'anar_quitec-<br>turas', activa: true,
+      op: { es: 'Intervenir imágenes de monumentos, fachadas u objetos que representen el poder.', en: 'Intervene images of monuments, façades or objects that represent power.' },
+      desc: {
+        es: 'La intervención se hace con palabras, frases, imágenes y stickers: como un grafiti, una pinta o un meme. Se fotografía un monumento, una fachada o un objeto de poder —o se elige una imagen libre en el buscador de la máquina—, se interviene con trazos y texto, se nombra y, si se quiere, se acompaña de una consigna y se ubica en el mapa.',
+        en: 'The intervention is made with words, phrases, images and stickers: like graffiti, a slogan painted on a wall or a meme. You photograph a monument, a façade or an object of power —or choose a free image in the machine’s search engine—, intervene it with lines and text, name it and, if you like, add a slogan and place it on the map.',
+      },
+      materiales: { es: 'Celular con cámara.', en: 'A phone with a camera.' },
+    },
+    {
+      id: 'no_poesia', nombre: 'no_poe-<br>sía', activa: true,
+      op: { es: 'Reescribir poesía con escritura asémica.', en: 'Rewrite poetry with asemic writing.' },
+      desc: {
+        es: 'Se elige un poema —al gusto, al azar o uno propio— y se escribe sin letras, verso por verso: se deja que la muñeca se mueva y el trazo se deslice mientras se medita o se dice en voz alta el verso. Esta escritura tiene un particular poder de fascinación por atípica y misteriosa, ya que invita a encontrar en ella sentidos ocultos.',
+        en: 'You choose a poem —by taste, by chance or one of your own— and write it without letters, line by line: you let the wrist move and the stroke slide while meditating on or reading aloud the line being written. This writing holds a particular fascination for being unusual and mysterious, as it invites us to find hidden meanings in it.',
+      },
+      materiales: { es: 'Un poema y un celular (o pluma, plumón y papel).', en: 'A poem and a phone (or pen, marker and paper).' },
+    },
+    {
+      id: 'ficciones_de_mi_barrio', nombre: 'ficciones_-<br>de_mi_barrio', activa: true,
+      op: { es: 'Crear historias ficticias en calles de determinada colonia.', en: 'Create fictional stories in the streets of a given neighbourhood.' },
+      desc: {
+        es: 'Se elige una colonia, se hace un recorrido al azar y se fotografían fachadas, calles y paisajes urbanos que llamen la atención, marcando en el mapa dónde se tomó cada foto. A partir de esos lugares se escribe una historia ficticia: los nombres de las calles, lo que se cuenta en la colonia o la pura invención pueden ser el punto de partida.',
+        en: 'You choose a neighbourhood, take a random walk and photograph façades, streets and urban landscapes that catch your eye, marking on the map where each photo was taken. From those places you write a fictional story: the street names, what people tell in the neighbourhood or pure invention can be the starting point.',
+      },
+      materiales: { es: 'Celular con cámara.', en: 'A phone with a camera.' },
+    },
+  ],
+};

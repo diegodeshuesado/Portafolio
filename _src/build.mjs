@@ -3,7 +3,11 @@
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { site, routes, ui, statement, bio, cv, series } from './content.mjs';
+import { site, routes, ui, statement, bio, cv, series, maquinas } from './content.mjs';
+
+// Una página por cada máquina activa: obra/maquinas/<id>/
+const activas = maquinas.items.filter((m) => m.activa);
+for (const m of activas) routes[`maq_${m.id}`] = { es: `obra/maquinas/${m.id}/`, en: `en/work/maquinas/${m.id}/` };
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const LANGS = ['es', 'en'];
@@ -62,7 +66,7 @@ function header({ lang, key, prefix }) {
   const t = ui[lang];
   const other = lang === 'es' ? 'en' : 'es';
   const link = (k, label, hash = '') => {
-    const cur = k === key || (k === 'home' && hash && series.some((s) => s.id === key));
+    const cur = k === key || (k === 'home' && hash && series.some((s) => s.id === key)) || (k === 'maquinas' && key.startsWith('maq_'));
     return `<a href="${prefix}${routes[k][lang]}${hash}"${cur ? ' aria-current="page"' : ''}>${label}</a>`;
   };
   return `<a class="skip" href="#main">${t.skip}</a>
@@ -70,6 +74,7 @@ function header({ lang, key, prefix }) {
   <a class="brand" href="${prefix}${routes.home[lang]}">${esc(site.name)}</a>
   <nav class="site-nav" aria-label="${lang === 'es' ? 'Principal' : 'Main'}">
     ${link('home', t.nav.work, '#obra')}
+    ${link('maquinas', t.nav.maquinas)}
     ${link('about', t.nav.about)}
     ${link('cv', t.nav.cv)}
     ${link('contact', t.nav.contact)}
@@ -204,6 +209,14 @@ function home(lang) {
 <section class="index" id="obra" aria-labelledby="index-title">
   <h2 class="label" id="index-title">${t.index}</h2>
   <ol class="index__list">
+    <li>
+      <a class="index__row" href="${prefix}${routes.maquinas[lang]}">
+        <span class="index__num">${maquinas.num}</span>
+        <span class="index__title">${maquinas.title[lang]}</span>
+        <span class="index__meta"><span>${maquinas.subtitle[lang]}</span><span>${maquinas.years}</span><span>${t.maq.machines(maquinas.items.length)}</span></span>
+        <span class="index__peek index__peek--folder" aria-hidden="true">${FOLDER}</span>
+      </a>
+    </li>
     ${series.map((s) => `<li>
       <a class="index__row" href="${prefix}${routes[s.id][lang]}">
         <span class="index__num">${s.num}</span>
@@ -355,6 +368,118 @@ function notFound() {
 `;
 }
 
+// ── _máquinas ─────────────────────────────────────────────────
+const FOLDER = `<svg class="folder" viewBox="0 0 150 104" aria-hidden="true"><path d="M2 16 V102 H148 V16 H62 L50 2 H2 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M2 16 H62" stroke="currentColor" stroke-width="2.2"/></svg>`;
+const plain = (h) => h.replace(/<br>/g, '').replace(/-(?=_|$)|-(?=[a-záéíóú])/g, '');
+
+function folders(lang, prefix) {
+  const t = ui[lang].maq;
+  return `<div class="carpetas">
+    ${maquinas.items.map((m) => {
+      const tag = m.activa ? 'a' : 'div';
+      const href = m.activa ? ` href="${prefix}${routes[`maq_${m.id}`][lang]}"` : '';
+      return `<${tag} class="carpeta${m.activa ? '' : ' carpeta--off'}"${href}>
+      ${FOLDER}<span class="carpeta__nombre">${m.nombre}</span>
+      <span class="carpeta__cedula">${lang === 'es' ? 'operación' : 'operation'}:/&lt; ${m.op[lang]}</span>
+      <span class="carpeta__estado">${m.activa ? t.open : t.soon}</span>
+    </${tag}>`;
+    }).join('\n    ')}
+  </div>`;
+}
+
+const maquinasLd = (lang) => ({
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: '_máquinas',
+  url: abs(routes.maquinas[lang]),
+  inLanguage: lang,
+  dateCreated: '2019',
+  description: maquinas.text[lang][0],
+  creator: { '@type': 'Person', name: site.name, url: abs(routes.home[lang]) },
+  license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+  hasPart: activas.map((m) => ({ '@type': 'CreativeWork', name: plain(m.nombre), url: abs(routes[`maq_${m.id}`][lang]), description: m.op[lang] })),
+});
+
+function maquinasPage(lang) {
+  const t = ui[lang];
+  const M = maquinas;
+  return page({
+    lang, key: 'maquinas',
+    title: `_máquinas (${M.years}) — ${site.name}`,
+    description: M.text[lang][0].slice(0, 158),
+    jsonld: maquinasLd(lang),
+    body: (prefix) => `
+<article class="series series--maq">
+  <header class="series__head">
+    <p class="series__num">${M.num}</p>
+    <h1 class="series__title">${M.title[lang]}</h1>
+    <dl class="series__meta">
+      <div><dt class="sr">${lang === 'es' ? 'Serie' : 'Series'}</dt><dd>${M.subtitle[lang]}</dd></div>
+      <div><dt class="sr">${lang === 'es' ? 'Año' : 'Year'}</dt><dd>${M.years}</dd></div>
+      <div><dt class="sr">${lang === 'es' ? 'Máquinas' : 'Machines'}</dt><dd>${t.maq.machines(M.items.length)}</dd></div>
+    </dl>
+    <div class="series__text">
+      ${M.text[lang].map((p) => `<p>${p}</p>`).join('\n      ')}
+      <p class="maq__ficha">${M.ficha[lang].join('<br>')}</p>
+      <a class="btn" href="${M.url}/">${t.maq.participate} →</a>
+    </div>
+  </header>
+  ${folders(lang, prefix)}
+  <nav class="series__next" aria-label="${t.nextSeries}">
+    <a href="${prefix}${routes.home[lang]}#obra">← ${t.allWork}</a>
+    <a class="series__next-link" href="${prefix}${routes[series[0].id][lang]}"><span class="label">${t.nextSeries}</span><span class="series__next-title">${series[0].num} ${series[0].title[lang]} →</span></a>
+  </nav>
+</article>`,
+  });
+}
+
+function maquinaPage(m, lang) {
+  const t = ui[lang];
+  const key = `maq_${m.id}`;
+  const idx = activas.indexOf(m);
+  const next = activas[(idx + 1) % activas.length];
+  const name = plain(m.nombre);
+  return page({
+    lang, key,
+    title: `${name} — _máquinas — ${site.name}`,
+    description: `${name}: ${m.op[lang]} ${m.desc[lang]}`.slice(0, 158),
+    jsonld: {
+      '@context': 'https://schema.org', '@type': 'CreativeWork', name, url: abs(routes[key][lang]), inLanguage: lang,
+      description: m.op[lang], isPartOf: { '@type': 'CreativeWork', name: '_máquinas', url: abs(routes.maquinas[lang]) },
+      creator: { '@type': 'Person', name: site.name }, license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+    },
+    body: (prefix) => `
+<article class="series series--maq">
+  <header class="series__head">
+    <p class="series__num"><a href="${prefix}${routes.maquinas[lang]}">_máquinas</a> / ${String(maquinas.items.indexOf(m) + 1).padStart(2, '0')}</p>
+    <h1 class="series__title maq__title">${name}</h1>
+    <dl class="series__meta">
+      <div><dt class="label">${t.maq.materials}</dt><dd>${m.materiales[lang]}</dd></div>
+      <div><dt class="label">${t.maq.authors}</dt><dd>${(m.credito || { es: site.name, en: site.name })[lang]}</dd></div>
+      <div><dt class="label">${lang === 'es' ? 'Licencia' : 'Licence'}</dt><dd>CC BY-NC-SA 4.0</dd></div>
+    </dl>
+    <div class="series__text">
+      <p class="maq__op"><span class="maq__op-label">${lang === 'es' ? 'operación' : 'operation'}:/&lt;</span> ${m.op[lang]}</p>
+      <p>${m.desc[lang]}</p>
+      <a class="btn" href="${maquinas.url}/${m.id}.html">${t.maq.make} →</a>
+    </div>
+  </header>
+  <section class="maq__galeria" aria-labelledby="gal-title">
+    <h2 class="label" id="gal-title">${t.maq.gallery}</h2>
+    <div class="gallery" data-maquina="${m.id}" data-base="${maquinas.url}" data-lang="${lang}"
+      data-empty="${esc(t.maq.empty)}" data-error="${esc(t.maq.error)}" data-make="${esc(t.maq.make)}" data-gallery="${esc(t.maq.siteGallery)}">
+      <p class="maq__estado">${t.maq.loading}</p>
+    </div>
+  </section>
+  <nav class="series__next" aria-label="${t.nextSeries}">
+    <a href="${prefix}${routes.maquinas[lang]}">← ${t.maq.back}</a>
+    <a class="series__next-link" href="${prefix}${routes[`maq_${next.id}`][lang]}"><span class="label">${t.maq.nextMachine}</span><span class="series__next-title maq__next">${plain(next.nombre)} →</span></a>
+  </nav>
+</article>
+<script src="${prefix}assets/maquinas.js" defer></script>`,
+  });
+}
+
 function sitemap() {
   const urls = Object.values(routes).flatMap((r) =>
     LANGS.map((l) => `  <url>
@@ -377,6 +502,8 @@ for (const p of ['obra', 'en', 'sobre', 'cv', 'contacto', 'index.html', '404.htm
 
 for (const lang of LANGS) {
   write(routes.home[lang], home(lang));
+  write(routes.maquinas[lang], maquinasPage(lang));
+  for (const m of activas) write(routes[`maq_${m.id}`][lang], maquinaPage(m, lang));
   for (const s of series) write(routes[s.id][lang], seriesPage(s, lang));
   write(routes.about[lang], about(lang));
   write(routes.cv[lang], cvPage(lang));

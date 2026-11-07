@@ -344,3 +344,44 @@ main { display: block; }
   a { text-decoration: none; }
   .cv__sec { break-inside: avoid; }
 }
+
+/* ── _máquinas ─────────────────────────────────────────────── */
+.btn {
+  display: inline-block; margin-top: 18px; padding: 12px 18px;
+  font: 500 14px/1 var(--mono); letter-spacing: .02em;
+  background: var(--ink); color: var(--bg); text-decoration: none;
+}
+.btn:hover { background: var(--accent); color: var(--ink); }
+.maq__ficha { font: 400 13px/1.6 var(--mono); color: var(--mute); }
+.maq__op { font: 500 clamp(16px, 1.35vw, 19px)/1.5 var(--mono); background: var(--ink); color: var(--bg); padding: 14px 16px; }
+.maq__op-label { color: var(--accent); }
+.maq__title { font-family: var(--mono); font-weight: 500; letter-spacing: -0.03em; font-size: clamp(34px, 7.5vw, 104px); line-height: 1; overflow-wrap: anywhere; }
+.maq__next { font-family: var(--mono); overflow-wrap: anywhere; }
+.maq__estado a { color: var(--ink); }
+.series__num a { color: inherit; }
+
+.carpetas {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 48px);
+  padding: clamp(24px, 4vw, 48px) 0; border-top: 1px solid var(--ink);
+}
+.carpeta { position: relative; display: block; color: var(--ink); text-decoration: none; font-family: var(--mono); max-width: 360px; }
+.carpeta .folder { display: block; width: 62%; height: auto; }
+.carpeta__nombre { position: absolute; top: 0; left: 5%; width: 55%; padding-top: 11%; font-size: clamp(15px, 1.3vw, 18px); line-height: 1.35; }
+.carpeta__cedula {
+  position: relative; display: block; margin: -11% 0 0 8%;
+  background: var(--ink); color: var(--bg); padding: 12px 14px; font-size: 14px; line-height: 1.55;
+}
+.carpeta__estado { display: block; margin: 12px 0 0 8%; font-size: 13px; }
+a.carpeta:hover .carpeta__cedula { background: var(--accent); color: var(--ink); }
+a.carpeta:hover .carpeta__estado { text-decoration: underline; }
+.carpeta--off { color: var(--mute); }
+.carpeta--off .carpeta__cedula { background: var(--mute); }
+
+.index__peek--folder { width: 120px; color: var(--ink); background: var(--accent); padding: 10px; }
+.index__peek--folder .folder { display: block; width: 100%; height: auto; }
+
+.maq__galeria { padding-top: clamp(24px, 4vw, 48px); }
+.maq__galeria .label { padding-bottom: 12px; border-bottom: 1px solid var(--ink); margin-bottom: 20px; }
+.maq__estado { font: 400 14px/1.6 var(--mono); color: var(--mute); }
+.maq__galeria .work figcaption .work__meta { font-family: var(--mono); font-size: 12px; }
