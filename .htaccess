@@ -15,3 +15,7 @@ ErrorDocument 404 /404.html
   ExpiresByType text/css "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
 </IfModule>
+
+# Tipos de archivo
+AddType application/xml .xml
+AddType text/plain .txt
