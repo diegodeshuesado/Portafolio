@@ -409,4 +409,4 @@ a.carpeta:hover .carpeta__estado { text-decoration: underline; }
 .ring__item--maq img { object-fit: cover; }
 
 /* menú principal e índice de obra en minúsculas */
-.site-header .brand, .site-header nav a, .site-header .lang, .index__title { text-transform: lowercase; }
+.site-header .brand, .site-header nav a, .site-header .lang, .index__title, .hero__name { text-transform: lowercase; }
