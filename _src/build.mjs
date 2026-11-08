@@ -14,6 +14,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const LANGS = ['es', 'en'];
 const BASE_PATH = new URL(site.url + '/').pathname; // p. ej. "/portafolio/"
 const YEAR = new Date().getFullYear();
+const GA = site.analytics ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${site.analytics}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.analytics}');</script>` : '';
 // Huella de cada archivo: cambia la URL cuando cambia el archivo, así el CDN y el navegador no sirven versiones viejas.
 const v = (f) => createHash('sha1').update(readFileSync(join(ROOT, 'assets', f))).digest('hex').slice(0, 8);
 const VER = { css: v('style.css'), js: v('main.js'), maq: v('maquinas.js') };
@@ -39,6 +41,7 @@ function head({ lang, key, title, description, prefix, jsonld }) {
   return `<!doctype html>
 <html lang="${lang}">
 <head>
+${GA}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
@@ -354,6 +357,7 @@ function notFound() {
   return `<!doctype html>
 <html lang="es">
 <head>
+${GA}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — ${esc(site.name)}</title>

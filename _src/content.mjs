@@ -5,6 +5,8 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
+  // Google Analytics 4 (ID de medición). Vacío = sin Analytics.
+  analytics: 'G-3723CCM15P',
   // Descripción para buscadores (portada), por idioma.
   seo: {
     es: 'Diego Deshuesado (1993), artista visual contemporáneo de Querétaro y Apaseo el Alto, Guanajuato. Collage, cerámica, grabado, imagen digital, escritura asémica y _máquinas.',
