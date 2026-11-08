@@ -64,5 +64,5 @@ Si cambias de dominio, cambia `site.url` en `_src/content.mjs` y vuelve a genera
 - [x] Galería Oscar Odín: 2017–2019.
 - [ ] Medidas de las obras y fechas de las piezas digitales sin año.
 - [x] Correo de contacto (cambiar al comprar dominio).
-- [x] `images/og-image.jpg`.
+- [x] `images/og-diego-deshuesado.jpg`.
 - [x] `files/cv-diego-deshuesado.pdf` (regenerarlo si cambia el CV).

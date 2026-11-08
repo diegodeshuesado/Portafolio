@@ -23,7 +23,7 @@ export const site = {
   // CV en PDF: si existe este archivo, aparece el botón de descarga.
   cvPdf: 'files/cv-diego-deshuesado.pdf',
   // Imagen para compartir en redes (1200 × 630 px).
-  ogImage: 'images/og-image.jpg',
+  ogImage: 'images/og-diego-deshuesado.jpg',
   portrait: { file: 'retrato/autorretrato-collage.jpg', ratio: '1480/2048' },
 };
 

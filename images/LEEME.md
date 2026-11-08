@@ -61,7 +61,7 @@ espacio reservado se vea bien. Si tu foto tiene otra proporción, cambia `ratio`
 
 | Archivo | Uso |
 |---|---|
-| `images/og-image.jpg` | Imagen que aparece al compartir el enlace en redes (1200 × 630 px). Tras subirla, corre `node _src/build.mjs` para activarla. |
+| `images/og-diego-deshuesado.jpg` | Imagen que aparece al compartir el enlace en redes (1200 × 630 px). Tras subirla, corre `node _src/build.mjs` para activarla. |
 | `files/cv-diego-deshuesado.pdf` | CV descargable. Tras subirlo, corre `node _src/build.mjs` y aparece el botón “Descargar CV”. |
 
 ## Miniaturas (opcional, para que la portada cargue más rápido)

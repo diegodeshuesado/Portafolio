@@ -54,7 +54,7 @@ function head({ lang, key, title, description, prefix, jsonld }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${abs(r[lang])}">
 <meta property="og:locale" content="${lang === 'es' ? 'es_MX' : 'en_US'}">
-${ogImg ? `<meta property="og:image" content="${ogImg}">\n<meta name="twitter:card" content="summary_large_image">` : '<meta name="twitter:card" content="summary">'}
+${ogImg ? `<meta property="og:image" content="${ogImg}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="${esc(site.name)}">\n<meta name="twitter:card" content="summary_large_image">` : '<meta name="twitter:card" content="summary">'}
 <meta name="theme-color" content="#f3f2ee">
 <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,7 +189,7 @@ function home(lang) {
   const all = series.flatMap((s) => s.works.map((w) => ({ ...w, s })));
   return page({
     lang, key: 'home', bodyClass: 'is-home',
-    title: `${site.name} — ${t.role}`,
+    title: site.name,
     description: site.seo[lang],
     jsonld: personLd(lang),
     body: (prefix) => `
