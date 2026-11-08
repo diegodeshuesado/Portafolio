@@ -198,7 +198,7 @@ function home(lang) {
     <div class="ring__track">
       ${all.map((w, i) => {
         const thumb = has(`images/miniaturas/${w.file}`) ? `miniaturas/${w.file}` : w.file;
-        return `<a class="ring__item" style="--i:${i}" href="${prefix}${routes[w.s.id][lang]}" tabindex="-1" aria-hidden="true">
+        return `<a class="ring__item" style="--i:${i}" href="${prefix}${routes[w.s.id][lang]}" tabindex="-1" aria-hidden="true" data-full="${prefix}images/${w.file}" data-cap="${esc(captionText(caption(w, lang)))}" data-series="${esc(w.s.title[lang])}">
         <span class="media">${media(thumb, '1/1', '', prefix, lang).replace(/<span class="ph__file">.*?<\/span>/, `<span class="ph__file">${String(i + 1).padStart(2, '0')}</span>`)}</span>
       </a>`;
       }).join('\n      ')}
@@ -206,6 +206,9 @@ function home(lang) {
     <div class="hero__text">
       <h1 class="hero__name">Diego<br>Deshuesado</h1>
     </div>
+  </div>
+  <div class="peek" aria-hidden="true">
+    <figure class="peek__fig"><img class="peek__img" alt=""><figcaption class="peek__cap"><span class="peek__title"></span><a class="peek__go" href="#">${lang === 'es' ? 'Ver serie' : 'See series'} →</a></figcaption></figure>
   </div>
 </section>
 
