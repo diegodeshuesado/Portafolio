@@ -1,6 +1,7 @@
 // Genera el sitio estático a partir de _src/content.mjs.
 // Uso:  node _src/build.mjs      (sin dependencias, Node 18+)
-import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { site, routes, ui, statement, bio, cv, series, maquinas } from './content.mjs';
@@ -13,6 +14,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const LANGS = ['es', 'en'];
 const BASE_PATH = new URL(site.url + '/').pathname; // p. ej. "/portafolio/"
 const YEAR = new Date().getFullYear();
+// Huella de cada archivo: cambia la URL cuando cambia el archivo, así el CDN y el navegador no sirven versiones viejas.
+const v = (f) => createHash('sha1').update(readFileSync(join(ROOT, 'assets', f))).digest('hex').slice(0, 8);
+const VER = { css: v('style.css'), js: v('main.js'), maq: v('maquinas.js') };
 
 // ── utilidades ────────────────────────────────────────────────
 const esc = (s = '') =>
@@ -56,8 +60,8 @@ ${ogImg ? `<meta property="og:image" content="${ogImg}">\n<meta name="twitter:ca
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap">
-<link rel="stylesheet" href="${prefix}assets/style.css">
-<script src="${prefix}assets/main.js" defer></script>
+<link rel="stylesheet" href="${prefix}assets/style.css?v=${VER.css}">
+<script src="${prefix}assets/main.js?v=${VER.js}" defer></script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ''}
 </head>`;
 }
@@ -353,7 +357,7 @@ function notFound() {
 <meta name="robots" content="noindex">
 <link rel="icon" href="${p}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&display=swap">
-<link rel="stylesheet" href="${p}assets/style.css">
+<link rel="stylesheet" href="${p}assets/style.css?v=${VER.css}">
 </head>
 <body>
 <header class="site-header"><a class="brand" href="${p}">${esc(site.name)}</a></header>
@@ -475,7 +479,7 @@ function maquinaPage(m, lang) {
     <a class="series__next-link" href="${prefix}${routes[`maq_${next.id}`][lang]}"><span class="label">${t.maq.nextMachine}</span><span class="series__next-title maq__next">${plain(next.nombre)} →</span></a>
   </nav>
 </article>
-<script src="${prefix}assets/maquinas.js" defer></script>`,
+<script src="${prefix}assets/maquinas.js?v=${VER.maq}" defer></script>`,
   });
 }
 

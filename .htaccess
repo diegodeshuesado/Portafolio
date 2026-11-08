@@ -19,3 +19,10 @@ ErrorDocument 404 /404.html
 # Tipos de archivo
 AddType application/xml .xml
 AddType text/plain .txt
+
+# Las páginas siempre se revisan (los CSS/JS llevan ?v= y sí se guardan en caché)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
