@@ -407,3 +407,6 @@ a.carpeta:hover .carpeta__estado { text-decoration: underline; }
 .maq__galeria .work figcaption .work__meta { font-family: var(--mono); font-size: 12px; }
 .ring__item--maq .media { background: var(--ink); }
 .ring__item--maq img { object-fit: cover; }
+
+/* menú principal e índice de obra en minúsculas */
+.site-header .brand, .site-header nav a, .site-header .lang, .index__title { text-transform: lowercase; }
