@@ -53,3 +53,37 @@
 
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
 })();
+
+// Portada: el círculo se muestra en orden aleatorio y suma piezas de la galería de _máquinas.
+(() => {
+  const ring = document.querySelector('.ring');
+  const track = ring?.querySelector('.ring__track');
+  if (!track) return;
+  const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const place = (items) => {
+    ring.style.setProperty('--n', items.length);
+    items.forEach((el, i) => { el.style.setProperty('--i', i); track.appendChild(el); });
+  };
+  let items = shuffle([...track.querySelectorAll('.ring__item')]);
+  place(items);
+
+  const { maqBase: base, maqHref: href, maqMax } = ring.dataset;
+  if (!base) return;
+  fetch(`${base}/envios/index.json`, { cache: 'no-cache' })
+    .then((r) => (r.ok ? r.json() : []))
+    .then((piezas) => {
+      const nuevas = shuffle(piezas.filter((p) => p.mini || p.imagen)).slice(0, Number(maqMax) || 8).map((p) => {
+        const a = document.createElement('a');
+        a.className = 'ring__item ring__item--maq';
+        a.href = `${href}${p.maquina}/`;
+        a.tabIndex = -1;
+        a.setAttribute('aria-hidden', 'true');
+        a.innerHTML = `<span class="media is-loaded"><img src="${base}/${p.mini || p.imagen}" alt="" loading="lazy" decoding="async"></span>`;
+        return a;
+      });
+      if (!nuevas.length) return;
+      items = shuffle(items.concat(nuevas));
+      place(items);
+    })
+    .catch(() => {});
+})();

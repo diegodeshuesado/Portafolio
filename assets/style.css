@@ -105,7 +105,8 @@ main { display: block; }
   padding: 24px 0;
 }
 .ring {
-  --thumb: calc(var(--ring) * 0.088);
+  /* el tamaño se ajusta si se suman piezas de _máquinas */
+  --thumb: calc(var(--ring) * min(0.088, 2.3 / var(--n)));
   --R: calc(var(--ring) / 2 - var(--thumb) / 2 - 4px);
   position: relative; width: var(--ring); height: var(--ring);
 }
@@ -385,3 +386,5 @@ a.carpeta:hover .carpeta__estado { text-decoration: underline; }
 .maq__galeria .label { padding-bottom: 12px; border-bottom: 1px solid var(--ink); margin-bottom: 20px; }
 .maq__estado { font: 400 14px/1.6 var(--mono); color: var(--mute); }
 .maq__galeria .work figcaption .work__meta { font-family: var(--mono); font-size: 12px; }
+.ring__item--maq .media { background: var(--ink); }
+.ring__item--maq img { object-fit: cover; }

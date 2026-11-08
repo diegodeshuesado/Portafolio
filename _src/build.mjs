@@ -190,7 +190,7 @@ function home(lang) {
     jsonld: personLd(lang),
     body: (prefix) => `
 <section class="hero" aria-label="${esc(site.name)}">
-  <div class="ring" style="--n:${all.length}">
+  <div class="ring" style="--n:${all.length}" data-maq-base="${maquinas.url}" data-maq-href="${prefix}${routes.maquinas[lang]}" data-maq-max="8">
     <div class="ring__track">
       ${all.map((w, i) => {
         const thumb = has(`images/miniaturas/${w.file}`) ? `miniaturas/${w.file}` : w.file;
