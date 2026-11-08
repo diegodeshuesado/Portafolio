@@ -78,7 +78,7 @@ function header({ lang, key, prefix }) {
   <a class="brand" href="${prefix}${routes.home[lang]}">${esc(site.name)}</a>
   <nav class="site-nav" aria-label="${lang === 'es' ? 'Principal' : 'Main'}">
     ${link('home', t.nav.work, '#obra')}
-    ${link('maquinas', t.nav.maquinas)}
+    <a href="${maquinas.url}/"${key === 'maquinas' || key.startsWith('maq_') ? ' aria-current="page"' : ''}>${t.nav.maquinas}</a>
     ${link('about', t.nav.about)}
     ${link('cv', t.nav.cv)}
     ${link('contact', t.nav.contact)}

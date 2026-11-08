@@ -91,6 +91,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/constelaciones_urbanas/"/>
   </url>
   <url>
+    <loc>https://diegodeshuesado.com/obra/maquinas/un_pueblo_feliz/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/un_pueblo_feliz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/un_pueblo_feliz/"/>
+  </url>
+  <url>
+    <loc>https://diegodeshuesado.com/en/work/maquinas/un_pueblo_feliz/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/un_pueblo_feliz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/un_pueblo_feliz/"/>
+  </url>
+  <url>
     <loc>https://diegodeshuesado.com/obra/maquinas/poe_arqui_lecturas/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://diegodeshuesado.com/obra/maquinas/poe_arqui_lecturas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://diegodeshuesado.com/en/work/maquinas/poe_arqui_lecturas/"/>

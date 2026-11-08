@@ -306,8 +306,13 @@ export const maquinas = {
       materiales: { es: 'Celular con cámara.', en: 'A phone with a camera.' },
     },
     {
-      id: 'un_pueblo_feliz', nombre: 'un_pue-<br>blo_feliz', activa: false,
-      op: { es: 'Contrarrestar el discurso de estabilidad social mediante la publicación de selfies con datos de violencia reales.', en: 'Counter the discourse of social stability by publishing selfies with real data on violence.' },
+      id: 'un_pueblo_feliz', nombre: 'un_pue-<br>blo_feliz', activa: true,
+      op: { es: 'Contrarrestar el discurso de estabilidad social con selfies sonrientes acompañadas de datos reales de violencia.', en: 'Counter the discourse of social stability with smiling selfies accompanied by real data on violence.' },
+      desc: {
+        es: 'Se elige una cifra real de violencia en México, al azar o de la lista; las cifras se actualizan con los datos más recientes de fuentes oficiales y organizaciones civiles. Después se toma una selfie sonriendo y la cifra aparece sobre la foto como un filtro. El contraste entre la sonrisa y el dato pone en duda la imagen de un pueblo feliz.',
+        en: 'You choose a real figure on violence in Mexico, at random or from the list; the figures are updated with the latest data from official sources and civil organisations. Then you take a smiling selfie and the figure appears over the photo like a filter. The contrast between the smile and the data calls into question the image of a happy people.',
+      },
+      materiales: { es: 'Celular con cámara.', en: 'A phone with a camera.' },
     },
     {
       id: 'poe_arqui_lecturas', nombre: 'poe_arqui_<br>lecturas', activa: true,
